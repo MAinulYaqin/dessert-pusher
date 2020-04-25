@@ -3,6 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="currentDessert"
+            type="String" />
+
+        <variable
+            name="revenue"
+            type="String" />
+
+        <variable
+            name="amountSold"
+            type="String" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -68,7 +83,7 @@
             android:id="@+id/revenue_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2 dollar"
+            android:text="@{revenue}"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="@dimen/large_text_size"
             app:layout_constraintBottom_toTopOf="@+id/margin_bottom_guide"
@@ -80,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
-            android:text="cupcake"
+            android:text="@{currentDessert}"
             android:textSize="@dimen/medium_text_size"
             app:layout_constraintBottom_toBottomOf="@+id/amount_sold_text"
             app:layout_constraintStart_toStartOf="@+id/margin_start_guide" />
@@ -89,10 +104,10 @@
             android:id="@+id/amount_sold_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/default_spacing"
             android:layout_marginBottom="@dimen/default_spacing"
             android:fontFamily="sans-serif-medium"
-            android:text="5"
+            android:paddingTop="@dimen/default_spacing"
+            android:text="@{amountSold}"
             android:textColor="@android:color/darker_gray"
             android:textSize="@dimen/medium_text_size"
             app:layout_constraintBottom_toTopOf="@+id/revenue_text"
